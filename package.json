@@ -4,7 +4,7 @@
 	"description": "## Setup",
 	"main": "index.js",
 	"scripts": {
-		"start": "",
+		"start": "concurrently --names=\"app,server\" \"cd app && echo 'App'\" \"cd server && echo 'Server'\"",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"homepage": "https://github.com/wangjj2/turbo-octo-enigma#readme",
