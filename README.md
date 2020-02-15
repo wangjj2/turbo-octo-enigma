@@ -6,10 +6,7 @@ cd into the project root and run `npm run start`
 
 ### Backend 
 
-https://laravel.com/docs/6.x/homestead#hostname-resolution
-
-Add the following line to your hosts file:
-`192.168.10.10 homestead.server`
+See server/README.md
 
 ## Project Information
 
