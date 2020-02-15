@@ -2,8 +2,8 @@
 	"name": "roman-room",
 	"version": "0.0.0",
 	"scripts": {
-		"start": "",
-		"install:vagrant": "",
+		"start": "vagrant up && vagrant ssh -c 'cd code && /bin/bash'",
+		"install:vagrant": "php vendor/bin/homestead make",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"homepage": "https://github.com/wangjj2/turbo-octo-enigma#readme",
