@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"scripts": {
 		"start": "",
-		"install:vagrant": "vagrant box add laravel/homestead",
+		"install:vagrant": "",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"homepage": "https://github.com/wangjj2/turbo-octo-enigma#readme",
