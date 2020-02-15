@@ -4,7 +4,12 @@
 
 cd into the project root and run `npm run start`
 
-## Project Layout 
+## Project Information
+
+### Languages
+
+* App: Vue.js with Vue-Native
+* Server: PHP with Laravel
 
 ### Folder Structure
 
