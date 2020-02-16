@@ -1,10 +1,10 @@
 <template>
-  <view class="container">
+  <view v-if="!cameraActive" class="container">
     <text class="text-color-primary">My Vue Native App</text>
     <text>{{message}}</text>
     <button v-bind:title="buttonText" v-bind:on-press="handleBtnPress" />
-    <camera-control />
   </view>
+  <camera-control v-else @back="handleBtnPress" />
 </template>
 
 <script>
@@ -14,12 +14,13 @@ export default {
   data: function() {
     return {
       message: "Hello World",
-      buttonText: "Press Here For Alert"
+      buttonText: "Press Here For Camera",
+      cameraActive: false
     };
   },
   methods: {
     handleBtnPress: function() {
-      alert("Btn Press");
+      this.cameraActive = !this.cameraActive;
     }
   }
 };
@@ -27,7 +28,7 @@ export default {
 
 <style>
 .container {
-  background-color: white;
+  background-color: transparent;
   align-items: center;
   justify-content: center;
   flex: 1;

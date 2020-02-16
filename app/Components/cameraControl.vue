@@ -1,12 +1,14 @@
 <template>
   <view class="container">
     <camera class="container" :type="this.type" />
+    <button v-bind:title="buttonText" v-bind:on-press="handleBackBtnPress" />
   </view>
 </template>
 
 <script>
 import {
   Camera,
+  Constants,
   getPermissionsAsync,
   requestPermissionsAsync
 } from "expo-camera";
@@ -14,12 +16,13 @@ export default {
   data: function() {
     return {
       hasCameraPermission: false,
-      type: Camera.Constants.Type.back
+      buttonText: "back to menu",
+      type: Constants.Type.back
     };
   },
   mounted: async function() {
     await getPermissionsAsync().then(async status => {
-      if (!status.status) {
+      if (status.status !== "granted") {
         await requestPermissionsAsync()
           .then(status => {
             hasCameraPermission = status.status == "granted" ? true : false;
@@ -30,12 +33,17 @@ export default {
       }
     });
   },
+  methods: {
+    handleBackBtnPress: function(){
+      this.$emit('back')
+    }
+  },
   components: { Camera }
 };
 </script>
 
 <style>
-.text-color-primary {
-  color: blue;
+.container {
+  flex: 1;
 }
 </style>
