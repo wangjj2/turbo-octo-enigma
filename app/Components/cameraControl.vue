@@ -31,9 +31,6 @@ export default {
 </script>
 
 <style>
-.container {
-  flex: 1;
-}
 .text-color-primary {
   color: blue;
 }
