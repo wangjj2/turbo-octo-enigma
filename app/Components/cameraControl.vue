@@ -34,8 +34,8 @@ export default {
     });
   },
   methods: {
-    handleBackBtnPress: function(){
-      this.$emit('back')
+    handleBackBtnPress: function() {
+      this.$emit("back");
     }
   },
   components: { Camera }
