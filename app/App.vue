@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import CameraControl from "./Components/CameraControl";
+import CameraControl from "./Components/cameraControl";
 export default {
   components: { CameraControl },
   data: function() {
