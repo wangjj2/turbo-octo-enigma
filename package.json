@@ -10,5 +10,6 @@
 	"homepage": "https://github.com/wangjj2/turbo-octo-enigma#readme",
 	"devDependencies": {
 		"concurrently": "*"
-	}
+	},
+	"dependencies": {}
 }
